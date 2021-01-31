@@ -32,6 +32,7 @@ import android.text.TextWatcher;
 import android.text.style.BackgroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ScrollView;
@@ -396,6 +397,8 @@ public class EditorActivity extends AppCompatActivity {
             openFile();
         } else if (itemId == R.id.menu_document_new) {
             newFile();
+        } else if (itemId == R.id.menu_dictate) {
+            startDictation();
         } else if (itemId == R.id.menu_document_save) {
             saveFile();
         } else if (itemId == R.id.menu_document_save_as) {
@@ -413,6 +416,11 @@ public class EditorActivity extends AppCompatActivity {
             searchItem.collapseActionView();
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void startDictation() {
+        View view = findViewById(R.id.speechProgressBar);
+        view.setVisibility(View.VISIBLE);
     }
 
     protected void newFile() {

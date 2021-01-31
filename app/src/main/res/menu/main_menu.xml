@@ -2,6 +2,12 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/menu_document_search"
+        android:title="@string/Search"
+        android:icon="@drawable/editfind"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
         android:id="@+id/menu_document_new"
         android:title="@string/New"
         android:icon="@drawable/documentnew"/>
@@ -18,11 +24,9 @@
         android:title="@string/Save_As"
         android:icon="@drawable/documentsave_as"/>
     <item
-        android:id="@+id/menu_document_search"
-        android:title="@string/Search"
-        android:icon="@drawable/editfind"
-        app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="never|collapseActionView" />
+        android:id="@+id/menu_dictate"
+        android:title="@string/Dictate"
+        android:icon="@drawable/settings"/>
     <item
         android:id="@+id/menu_document_settings"
         android:title="@string/Settings"
